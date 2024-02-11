@@ -1,6 +1,6 @@
 --Importing the dataset 
 
-CREATE TABLE sept_2021
+CREATE TABLE jan
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -15,7 +15,7 @@ CREATE TABLE sept_2021
  end_lng real, 
  member varchar);
  
-CREATE TABLE oct_2021
+CREATE TABLE feb
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -30,7 +30,7 @@ CREATE TABLE oct_2021
  end_lng real, 
  member varchar);
 
-CREATE TABLE nov_2021
+CREATE TABLE mar
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -45,22 +45,7 @@ CREATE TABLE nov_2021
  end_lng real, 
  member varchar);
 
-CREATE TABLE dec_2021
-(ride_id varchar,
- rideable_type varchar,
- started_at TIMESTAMP,
- ended_at TIMESTAMP,
- start_station_name varchar,
- start_station_id varchar,
- end_station_name varchar,
- end_stattion_id varchar,
- start_lat real,
- start_lng real,
- end_lat real,
- end_lng real, 
- member varchar);
- 
-CREATE TABLE jan_2022
+CREATE TABLE apr
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -75,52 +60,7 @@ CREATE TABLE jan_2022
  end_lng real, 
  member varchar);
  
- CREATE TABLE feb_2022
-(ride_id varchar,
- rideable_type varchar,
- started_at TIMESTAMP,
- ended_at TIMESTAMP,
- start_station_name varchar,
- start_station_id varchar,
- end_station_name varchar,
- end_stattion_id varchar,
- start_lat real,
- start_lng real,
- end_lat real,
- end_lng real, 
- member varchar);
-
-CREATE TABLE mar_2022
-(ride_id varchar,
- rideable_type varchar,
- started_at TIMESTAMP,
- ended_at TIMESTAMP,
- start_station_name varchar,
- start_station_id varchar,
- end_station_name varchar,
- end_stattion_id varchar,
- start_lat real,
- start_lng real,
- end_lat real,
- end_lng real, 
- member varchar);
-
-CREATE TABLE apr_2022
-(ride_id varchar,
- rideable_type varchar,
- started_at TIMESTAMP,
- ended_at TIMESTAMP,
- start_station_name varchar,
- start_station_id varchar,
- end_station_name varchar,
- end_stattion_id varchar,
- start_lat real,
- start_lng real,
- end_lat real,
- end_lng real, 
- member varchar);
-
-CREATE TABLE may_2022
+CREATE TABLE may
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -135,7 +75,7 @@ CREATE TABLE may_2022
  end_lng real, 
  member varchar);
  
- CREATE TABLE jun_2022
+ CREATE TABLE jun
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -150,7 +90,7 @@ CREATE TABLE may_2022
  end_lng real, 
  member varchar);
 
-CREATE TABLE jul_2022
+CREATE TABLE jul
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -165,7 +105,22 @@ CREATE TABLE jul_2022
  end_lng real, 
  member varchar);
 
-CREATE TABLE aug_2022
+CREATE TABLE aug
+(ride_id varchar,
+ rideable_type varchar,
+ started_at TIMESTAMP,
+ ended_at TIMESTAMP,
+ start_station_name varchar,
+ start_station_id varchar,
+ end_station_name varchar,
+ end_stattion_id varchar,
+ start_lat real,
+ start_lng real,
+ end_lat real,
+ end_lng real, 
+ member varchar);
+
+CREATE TABLE sept
 (ride_id varchar,
  rideable_type varchar,
  started_at TIMESTAMP,
@@ -180,93 +135,190 @@ CREATE TABLE aug_2022
  end_lng real, 
  member varchar);
  
- --Combining all the 12-months dataset together using the 'UNION ALL' Command
+ CREATE TABLE oct
+(ride_id varchar,
+ rideable_type varchar,
+ started_at TIMESTAMP,
+ ended_at TIMESTAMP,
+ start_station_name varchar,
+ start_station_id varchar,
+ end_station_name varchar,
+ end_stattion_id varchar,
+ start_lat real,
+ start_lng real,
+ end_lat real,
+ end_lng real, 
+ member varchar);
+
+CREATE TABLE nov
+(ride_id varchar,
+ rideable_type varchar,
+ started_at TIMESTAMP,
+ ended_at TIMESTAMP,
+ start_station_name varchar,
+ start_station_id varchar,
+ end_station_name varchar,
+ end_stattion_id varchar,
+ start_lat real,
+ start_lng real,
+ end_lat real,
+ end_lng real, 
+ member varchar);
+
+CREATE TABLE dec
+(ride_id varchar,
+ rideable_type varchar,
+ started_at TIMESTAMP,
+ ended_at TIMESTAMP,
+ start_station_name varchar,
+ start_station_id varchar,
+ end_station_name varchar,
+ end_stattion_id varchar,
+ start_lat real,
+ start_lng real,
+ end_lat real,
+ end_lng real, 
+ member varchar);
  
- CREATE VIEW all_trips AS
- SELECT * FROM sept_2021 AS sept_21
- UNION ALL
- SELECT * FROM oct_2021 AS oct_21
- UNION ALL
- SELECT * FROM nov_2021 AS nov_21
- UNION ALL
- SELECT * FROM dec_2021 AS dec_21
- UNION ALL
- SELECT * FROM jan_2022 AS jan_22
- UNION ALL
- SELECT * FROM feb_2022 AS feb_22
- UNION ALL
- SELECT * FROM mar_2022 AS mar_22
- UNION ALL
- SELECT * FROM apr_2022 AS apr_22
- UNION ALL
- SELECT * FROM may_2022 AS may_22
- UNION ALL
- SELECT * FROM jun_2022 AS jun_22
- UNION ALL
- SELECT * FROM jul_2022 AS jul_22
- UNION ALL
- SELECT * FROM aug_2022 AS aug_22;
+--Combining all the 12-months dataset together using the 'UNION ALL' statement
  
--- Cleaning the data by removing null values
+ CREATE VIEW all_trips_22 AS
+ SELECT * FROM jan
+ UNION ALL
+ SELECT * FROM feb
+ UNION ALL
+ SELECT * FROM mar
+ UNION ALL
+ SELECT * FROM apr
+ UNION ALL
+ SELECT * FROM may
+ UNION ALL
+ SELECT * FROM jun
+ UNION ALL
+ SELECT * FROM jul
+ UNION ALL
+ SELECT * FROM aug
+ UNION ALL
+ SELECT * FROM sept
+ UNION ALL
+ SELECT * FROM oct
+ UNION ALL
+ SELECT * FROM nov
+ UNION ALL
+ SELECT * FROM dec;
 
-SELECT * FROM all_trips
-WHERE start_station_name IS NOT null
-AND
-end_station_name IS NOT null;
+--Change column name from 'member_casual' to 'user_type' for clarity 
 
---Extracting the date and time from the "started_at" and "ended_at" column and assigning them to their various day of the week and month for indepth analysis.
--- Creating VIEW for reusability
-CREATE VIEW all_trips_cleaned AS
-SELECT ride_id , rideable_type,start_station_name, start_station_id, end_station_name, end_stattion_id, member,
-DATE(started_at) AS start_date,
-DATE(ended_at) AS end_date,
-CAST(started_at AS time) AS start_time,
-CAST(ended_at AS time) AS end_time,
-to_char(started_at, 'Dy') AS day_of_week,
-to_char(started_at, 'month') AS month_of_year
-FROM all_trips
-WHERE start_station_name IS NOT null
-AND
-end_station_name IS NOT null;
+ALTER TABLE all_trips_22
+RENAME COLUMN member_casual TO user_type;
+ 
+-- Total number of rides by user_type 
 
--- Analysing the Data
--- Determine which member type has most rides
+SELECT user_type,
+COUNT (ride_id)
+FROM all_trips_22
+GROUP BY user_type;
 
-SELECT member AS member_type, COUNT(ride_id)
-FROM all_trips_cleaned
-GROUP BY member
+--Total number of rides by month
 
--- Determine Month with most rides per member_type
-
-SELECT month_of_year, member AS member_type, COUNT(ride_id) total_rides
-FROM all_trips_cleaned
-GROUP BY month_of_year, member
+SELECT
+ user_type,
+ CASE WHEN DATE_PART('month', started_at) = 1 THEN 'January'
+         WHEN DATE_PART('month', started_at) = 2 THEN 'February'
+         WHEN DATE_PART('month', started_at) = 3 THEN 'March'
+         WHEN DATE_PART('month', started_at) = 4 THEN 'April'
+      WHEN DATE_PART('month', started_at) = 5 THEN 'May'
+      WHEN DATE_PART('month', started_at) = 6 THEN 'June'
+      WHEN DATE_PART('month', started_at) = 7 THEN 'July'
+      WHEN DATE_PART('month', started_at) = 8 THEN 'August'
+      WHEN DATE_PART('month', started_at) = 9 THEN 'September'
+      WHEN DATE_PART('month', started_at) = 10 THEN 'October'
+      WHEN DATE_PART('month', started_at) = 11 THEN 'November'
+   ELSE 'December'
+   END AS month,
+COUNT(*) total_rides
+FROM all_trips_22
+GROUP BY
+     month,
+  user_type
 ORDER BY total_rides DESC;
 
---Determine the number of rides by casual members for each day of the week
+-- Total number of rides by days of week
 
-SELECT day_of_week, COUNT(ride_id) AS total_rides
-FROM all_trips_cleaned
-WHERE member = 'casual'
-GROUP BY day_of_week
+SELECT
+ user_type,
+ CASE WHEN DATE_PART('dow', started_at) = 1 THEN 'Mon'
+         WHEN DATE_PART('dow', started_at) = 2 THEN 'Tues'
+         WHEN DATE_PART('dow', started_at) = 3 THEN 'Wed'
+         WHEN DATE_PART('dow', started_at) = 4 THEN 'Thurs'
+      WHEN DATE_PART('dow', started_at) = 5 THEN 'Fri'
+      WHEN DATE_PART('dow', started_at) = 6 THEN 'Sat'
+   ELSE 'Sun'
+   END AS day_of_week,
+COUNT(*) total_rides
+FROM all_trips_22
+GROUP BY
+     day_of_week,
+  user_type
 ORDER BY total_rides DESC;
 
---Determine the number of rides by members with annual membership for each day of the week.
+-- Preferrred bike type by user type
 
-SELECT day_of_week, COUNT(ride_id) AS total_rides
-FROM all_trips_cleaned
-WHERE member = 'member'
-GROUP BY day_of_week
-ORDER BY total_rides DESC;
+SELECT 
+ user_type,
+ rideable_type,
+ COUNT(*) total_rides
+FROM all_trips_22
+GROUP BY 
+ user_type,
+ rideable_type
+ORDER BY 3 DESC;
 
--- Determine the preferred bike type for both member type
-SELECT member, rideable_type, COUNT(rideable_type) AS total_use
-FROM all_trips_cleaned
-GROUP BY member, rideable_type
-ORDER BY total_use DESC;
+-- TOP 5 most popular start stations
 
+SELECT 
+ start_station_name,
+ COUNT(*) total_rides
+FROM all_trips_22
+WHERE start_station_name IS NOT NULL
+GROUP BY 
+  1
+ORDER BY 2 DESC
+LIMIT 5;
 
+-- TOP 5 most popular end stations
 
+SELECT 
+ end_station_name,
+ COUNT(*) total_rides
+FROM all_trips_22
+WHERE end_station_name IS NOT NULL
+GROUP BY 
+  1
+ORDER BY 2 DESC
+LIMIT 5;
+
+--Bike rides per hour
+
+SELECT 
+    EXTRACT(HOUR FROM started_at) AS hour_of_day,
+    COUNT(*) AS total_rides
+FROM 
+    all_trips_22
+GROUP BY 
+    hour_of_day
+ORDER BY 
+    hour_of_day;
+ 
+-- Average ride time (in minutes) by user type
+
+SELECT 
+    user_type,
+    ROUND(AVG(EXTRACT(EPOCH FROM (ended_at - started_at)))/60 , 1) AS avg_ride_time_minutes
+FROM 
+    all_trips_22
+GROUP BY 
+    user_type;
 
 
 
