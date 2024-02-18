@@ -1,3 +1,5 @@
+#SQL queries for Google Data Analytics Capstone Project.
+
 --Importing the dataset 
 
 CREATE TABLE jan
