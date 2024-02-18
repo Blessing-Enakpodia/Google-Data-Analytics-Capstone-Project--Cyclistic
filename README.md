@@ -27,35 +27,42 @@ The following business questions will be answered to gain required insights;
 
 # Process
 For the execution of this project, SQL will be utilized for indepth analysis and Power BI for the visualization and sharing of insights to key stakeholders. I started off by creating tables and loading the 12 months data into postgresql
+
 ![](gda1.jpg)
-Then, went ahead to combine all 12 months data into a single view for easy and proper analysis
-![](gda2.jpg)
+Then, went ahead to combine all 12 months data into a single view for easy and proper analysis.
+
+![](gda2.PNG)
 Before commensing indepth analysis, I changed the column name 'member-casual' to 'user-type' for clarity
-![](gda3.jpg)
+
+![](gda3.PNG)
 
 # Data Analysis
 1. How does the total number of rides vary between different user types?
-![](gda4.jpg)   ![](gda4.1.jpg)
+   
+![](gda4.PNG)   ![](gda4.1.PNG)
 From the above we can see that majority of Cyclistic users are Anuual member and the main focus is converting the 40% who are casual members to annual members.
 
-
-
-From the above, we can seee that the preferred bike for annual members is the classic bikes while that of casual users is electric bikes. Also, we can see that annual members do not use docked bikes at all.
-
 2. How are rides distributed throughout the week among Cyclistic users?
-![](gda5.jpg)   ![](gda5.1.jpg)
+   
+![](gda5.PNG)   ![](gda5.1.PNG)
 
 3. What is the monthly distribution pattern of rides among Cyclistic users?
-![](gda6.jpg)   ![](gda6.1.jpg)
+   
+![](gda6.PNG)   ![](gda6.1.PNG)
 
 4. What is the daily distribution pattern of rides among Cyclistic users?
-![](gda7.jpg)   ![](gda7.1.jpg)
+   
+![](gda7.PNG)   ![](gda7.1.PNG)
 
 5. What is the average duration of rides taken by Cyclistic users?
-![](gda8.jpg)   ![](gda8.1.jpg)
+   
+![](gda8.PNG)   ![](gda8.1.PNG)
 
 6. Which bike type is most preferred by Cyclistic users?
-![](gda9.jpg)   ![](gda9.1.jpg)
+    
+![](gda9.PNG)   ![](gda9.1.PNG)
+
+From the above, we can seee that the preferred bike for annual members is the classic bikes while that of casual users is electric bikes. Also, we can see that annual members do not use docked bikes at all.
 
 
 
