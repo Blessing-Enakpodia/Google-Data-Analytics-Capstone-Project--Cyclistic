@@ -37,6 +37,7 @@ Before commensing indepth analysis, I changed the column name 'member-casual' to
 ![](gda3.PNG)
 
 # Data Analysis
+The full codes used for indepth analysis can be found [here](GDA_cyclystic_capstone_project)
 1. How does the total number of rides vary between different user types?
    
 ![](gda4.PNG)   ![](gda4.1.PNG)
