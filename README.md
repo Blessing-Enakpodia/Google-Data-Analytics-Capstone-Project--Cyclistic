@@ -37,29 +37,30 @@ Before commensing indepth analysis, I changed the column name 'member-casual' to
 ![](gda3.PNG)
 
 # Data Analysis
-The full codes used for indepth analysis can be found [here](GDA_cyclystic_capstone_project)
-1. How does the total number of rides vary between different user types?
+ALL codes used for indepth analysis can be found [here](GDA_cyclystic_capstone_project)
+
+**1. How does the total number of rides vary between different user types?**
    
 ![](gda4.PNG)   ![](gda4.1.PNG)
 From the above we can see that majority of Cyclistic users are Anuual member and the main focus is converting the 40% who are casual members to annual members.
 
-2. How are rides distributed throughout the week among Cyclistic users?
+**2. How are rides distributed throughout the week among Cyclistic users?**
    
 ![](gda5.PNG)   ![](gda5.1.PNG)
 
-3. What is the monthly distribution pattern of rides among Cyclistic users?
+**3. What is the monthly distribution pattern of rides among Cyclistic users?**
    
 ![](gda6.PNG)   ![](gda6.1.PNG)
 
-4. What is the daily distribution pattern of rides among Cyclistic users?
+**4. What is the daily distribution pattern of rides among Cyclistic users?**
    
 ![](gda7.PNG)   ![](gda7.1.PNG)
 
-5. What is the average duration of rides taken by Cyclistic users?
+**5. What is the average duration of rides taken by Cyclistic users?**
    
 ![](gda8.PNG)   ![](gda8.1.PNG)
 
-6. Which bike type is most preferred by Cyclistic users?
+**6. Which bike type is most preferred by Cyclistic users?**
     
 ![](gda9.PNG)   ![](gda9.1.PNG)
 
