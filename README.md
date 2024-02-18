@@ -19,16 +19,45 @@ Cyclistic, a bike rental company, offers flexible pricing plans including single
 The following business questions will be answered to gain required insights;
 
 1. How does the total number of rides vary between different user types?
-2. What is the proportionate distribution of rides among different user categories?
-3. Which bike type is most preferred by Cyclistic users?
-4. How are rides distributed throughout the week among Cyclistic users?
-5. What is the monthly distribution pattern of rides among Cyclistic users?
-6. What is the average duration of rides taken by Cyclistic users?
+2. How are rides distributed throughout the week among Cyclistic users?
+3. What is the monthly distribution pattern of rides among Cyclistic users?
+4. What is the daily distribution pattern of rides among Cyclistic users?
+5. What is the average duration of rides taken by Cyclistic users?
+6.  Which bike type is most preferred by Cyclistic users?
 
 # Process
 For the execution of this project, SQL will be utilized for indepth analysis and Power BI for the visualization and sharing of insights to key stakeholders. I started off by creating tables and loading the 12 months data into postgresql
 ![](gda1.jpg)
-Then, went ahead to rename the user-type column for clarity and better understanding.
+Then, went ahead to combine all 12 months data into a single view for easy and proper analysis
 ![](gda2.jpg)
+Before commensing indepth analysis, I changed the column name 'member-casual' to 'user-type' for clarity
+![](gda3.jpg)
+
+# Data Analysis
+1. How does the total number of rides vary between different user types?
+![](gda4.jpg)   ![](gda4.1.jpg)
+From the above we can see that majority of Cyclistic users are Anuual member and the main focus is converting the 40% who are casual members to annual members.
+
+
+
+From the above, we can seee that the preferred bike for annual members is the classic bikes while that of casual users is electric bikes. Also, we can see that annual members do not use docked bikes at all.
+
+2. How are rides distributed throughout the week among Cyclistic users?
+![](gda5.jpg)   ![](gda5.1.jpg)
+
+3. What is the monthly distribution pattern of rides among Cyclistic users?
+![](gda6.jpg)   ![](gda6.1.jpg)
+
+4. What is the daily distribution pattern of rides among Cyclistic users?
+![](gda7.jpg)   ![](gda7.1.jpg)
+
+5. What is the average duration of rides taken by Cyclistic users?
+![](gda8.jpg)   ![](gda8.1.jpg)
+
+6. Which bike type is most preferred by Cyclistic users?
+![](gda9.jpg)   ![](gda9.1.jpg)
+
+
+
 
 
