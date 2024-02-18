@@ -28,7 +28,7 @@ The following business questions will be answered to gain required insights;
 # Process
 For the execution of this project, SQL will be utilized for indepth analysis and Power BI for the visualization and sharing of insights to key stakeholders. I started off by creating tables and loading the 12 months data into postgresql
 
-![](gda1.jpg)
+![](gda1.PNG)
 Then, went ahead to combine all 12 months data into a single view for easy and proper analysis.
 
 ![](gda2.PNG)
