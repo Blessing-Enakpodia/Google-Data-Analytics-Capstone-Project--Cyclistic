@@ -66,6 +66,12 @@ From the above we can see that majority of Cyclistic users are Anuual member and
 
 From the above, we can seee that the preferred bike for annual members is the classic bikes while that of casual users is electric bikes. Also, we can see that annual members do not use docked bikes at all.
 
+# Recommendation
+
+# Dashboard
+
+![](gda10.PNG)
+
 
 
 
