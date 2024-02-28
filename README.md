@@ -26,7 +26,10 @@ The following business questions will be answered to gain required insights;
 6.  Which bike type is most preferred by Cyclistic users?
 
 # Process
-For the execution of this project, SQL will be utilized for indepth analysis and Power BI for the visualization and sharing of insights to key stakeholders. I started off by creating tables and loading the 12 months data into postgresql
+For the execution of this project, SQL will be utilized for indepth analysis and Power BI for the visualization and sharing of insights to key stakeholders.
+ALL codes used for indepth analysis can be found [here](GDA_cyclystic_capstone_project)
+
+I started off by creating tables and loading the 12 months data into postgresql.
 
 ![](gda1.PNG)
 Then, went ahead to combine all 12 months data into a single view for easy and proper analysis.
@@ -37,7 +40,6 @@ Before commensing indepth analysis, I changed the column name 'member-casual' to
 ![](gda3.PNG)
 
 # Data Analysis
-ALL codes used for indepth analysis can be found [here](GDA_cyclystic_capstone_project)
 
 **1. How does the total number of rides vary between different user types?**
    
